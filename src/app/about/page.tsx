@@ -2,10 +2,12 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Floatenu from "@/components/Floatenu";
 import styles from "./page.module.css";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function AboutPage() {
   return (
     <>
+    <AnimatedBackground />
     <Header />
     <main className={styles.main}>
       <section className={styles.section}>

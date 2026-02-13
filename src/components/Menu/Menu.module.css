@@ -1,5 +1,5 @@
 .nav {
-  display: none;
+  display: inline-flex;
   align-items: center;
   gap: 1.25rem;
 }
@@ -20,6 +20,6 @@
 
 @media (max-width: 660px) {
   .nav {
-    display: inline-flex;
+    display: none;
   }
 }

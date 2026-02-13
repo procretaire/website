@@ -1,10 +1,14 @@
 import Image from "next/image";
+import Typewriter from "@/components/Typewriter";
 import meta from "@/data/metadata.json";
 import styles from "./page.module.css";
 import Link from "next/link";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
+    <>
+    <AnimatedBackground />
     <main className={styles.main}>
       <div className={styles.glowWrap}>
         <div className={`${styles.glow} ${styles.glowOne}`} />
@@ -28,12 +32,14 @@ export default function Home() {
         <div className={styles.textBlock}>
           <p className={styles.kicker}>Coming soon</p>
           <h1 className={styles.title}>Procretaire</h1>
-          <h2 className={styles.tagline}>{meta.site.tagline}</h2>
+          <Typewriter items={meta.site.tagline} typingSpeedMin={300} className={styles.tagline} />
           <p className={styles.subtitle}>
-            We are crafting something refined. The full experience lands soon.
+            We are crafting something refined.<br />
+            The full experience lands soon.
           </p>
         </div>
       </section>
     </main>
+  </>
   );
 }

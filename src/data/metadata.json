@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "Procretaire",
-    "tagline": "Design. Develop. Deploy. Deliver.",
+    "tagline": ["Design.", "Develop.", "Deploy.", "Deliver."],
     "description": "Your professional graphic and web services and solutions",
     "shortDescription": "Procretaire - Professional Branding & Web Services",
     "author": "Procretaire Team",
