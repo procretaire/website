@@ -1,141 +1,124 @@
-.page {
-  --background: #fafafa;
-  --foreground: #fff;
-
-  --text-primary: #000;
-  --text-secondary: #666;
-
-  --button-primary-hover: #383838;
-  --button-secondary-hover: #f2f2f2;
-  --button-secondary-border: #ebebeb;
-
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-geist-sans);
-  background-color: var(--background);
+ .main {
+	position: relative;
+	min-height: 100vh;
+	overflow: hidden;
+	background: hsl(var(--background));
+	color: hsl(var(--foreground));
 }
 
-.main {
-  display: flex;
-  min-height: 100vh;
-  width: 100%;
-  max-width: 800px;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
-  background-color: var(--foreground);
-  padding: 120px 60px;
+.glowWrap {
+	position: absolute;
+	inset: 0;
+	z-index: -1;
 }
 
-.intro {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  gap: 24px;
+.glow {
+	position: absolute;
+	border-radius: 999px;
+	filter: blur(90px);
 }
 
-.intro h1 {
-  max-width: 320px;
-  font-size: 40px;
-  font-weight: 600;
-  line-height: 48px;
-  letter-spacing: -2.4px;
-  text-wrap: balance;
-  color: var(--text-primary);
+.glowOne {
+	left: -8rem;
+	top: -9rem;
+	height: 26rem;
+	width: 26rem;
+	background: radial-gradient(
+		circle,
+		hsl(var(--accent) / 0.45),
+		transparent 65%
+	);
 }
 
-.intro p {
-  max-width: 440px;
-  font-size: 18px;
-  line-height: 32px;
-  text-wrap: balance;
-  color: var(--text-secondary);
+.glowTwo {
+	right: -9rem;
+	top: 2.5rem;
+	height: 32rem;
+	width: 32rem;
+	background: radial-gradient(
+		circle,
+		hsl(var(--primary) / 0.4),
+		transparent 65%
+	);
 }
 
-.intro a {
-  font-weight: 500;
-  color: var(--text-primary);
+.glowThree {
+	bottom: -11rem;
+	left: 50%;
+	height: 32rem;
+	width: 32rem;
+	transform: translateX(-50%);
+	background: radial-gradient(
+		circle,
+		hsl(var(--secondary) / 0.6),
+		transparent 65%
+	);
 }
 
-.ctas {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 440px;
-  gap: 16px;
-  font-size: 14px;
+.hero {
+	margin: 0 auto;
+	display: flex;
+	min-height: 100vh;
+	max-width: 60rem;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	padding: 5rem 1.5rem;
+	text-align: center;
 }
 
-.ctas a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  padding: 0 16px;
-  border-radius: 128px;
-  border: 1px solid transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  width: fit-content;
-  font-weight: 500;
+.logoWrap {
+	display: flex;
+	height: 6rem;
+	width: 6rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1.5rem;
+	border: 1px solid hsl(var(--border));
+	background: hsl(var(--card) / 0.8);
+	padding: 1rem;
+	box-shadow: 0 14px 40px hsl(var(--accent) / 0.25);
 }
 
-a.primary {
-  background: var(--text-primary);
-  color: var(--background);
-  gap: 8px;
+.logo {
+	height: 100%;
+	width: 100%;
 }
 
-a.secondary {
-  border-color: var(--button-secondary-border);
+.textBlock {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
 }
 
-/* Enable hover only on non-touch devices */
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
+.kicker {
+	margin: 0;
+	font-size: 0.7rem;
+	letter-spacing: 0.4em;
+	text-transform: uppercase;
+	color: hsl(var(--muted-foreground));
 }
 
-@media (max-width: 600px) {
-  .main {
-    padding: 48px 24px;
-  }
-
-  .intro {
-    gap: 16px;
-  }
-
-  .intro h1 {
-    font-size: 32px;
-    line-height: 40px;
-    letter-spacing: -1.92px;
-  }
+.title {
+	margin: 0;
+	font-family: var(--font-fraunces), var(--font-geist-sans), serif;
+	font-size: clamp(2.5rem, 3vw + 1.5rem, 3.4rem);
+	font-weight: 600;
 }
 
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
+.subtitle {
+	margin: 0;
+	font-size: 1rem;
+	color: hsl(var(--muted-foreground));
+}
 
-  .page {
-    --background: #000;
-    --foreground: #000;
+@media (min-width: 640px) {
+	.hero {
+		padding: 6rem 1.5rem;
+	}
 
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
+	.subtitle {
+		font-size: 1.125rem;
+	}
 }

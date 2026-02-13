@@ -1,0 +1,107 @@
+.floatenu {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.trigger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+  box-shadow: 0 10px 40px hsl(var(--foreground) / 0.15);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.trigger:hover {
+  box-shadow: 0 14px 48px hsl(var(--foreground) / 0.22);
+  transform: translateY(-2px);
+}
+
+.trigger:focus-visible {
+  outline: 2px solid hsl(var(--ring));
+  outline-offset: 2px;
+}
+
+.triggerIcon {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: currentColor;
+  transition: transform 0.2s ease;
+}
+
+.triggerOpen .triggerIcon {
+  transform: rotate(90deg);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 13rem;
+  border-radius: 0.75rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  padding: 0.5rem;
+  box-shadow: 0 16px 48px hsl(var(--foreground) / 0.15);
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.menuOpen {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.menuItem:hover,
+.menuItem:focus-visible {
+  background: hsl(var(--muted) / 0.6);
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.label {
+  flex: 1;
+  letter-spacing: 0.01em;
+}
+
+@media (min-width: 768px) {
+  .floatenu {
+    display: none;
+  }
+}

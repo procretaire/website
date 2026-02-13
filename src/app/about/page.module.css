@@ -1,0 +1,86 @@
+.main {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+}
+
+.section {
+  margin: 0 auto;
+  display: flex;
+  max-width: 52rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 5rem 1.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logoWrap {
+  display: flex;
+  height: 4rem;
+  width: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card) / 0.8);
+  padding: 0.75rem;
+  box-shadow: 0 12px 32px hsl(var(--accent) / 0.2);
+}
+
+.logo {
+  height: 100%;
+  width: 100%;
+}
+
+.kicker {
+  margin: 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-fraunces), var(--font-geist-sans), serif;
+  font-size: clamp(2.3rem, 2.5vw + 1.5rem, 3rem);
+  font-weight: 600;
+}
+
+.intro {
+  margin: 0;
+  font-size: 1rem;
+  color: hsl(var(--muted-foreground));
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: hsl(var(--foreground) / 0.9);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: hsl(var(--muted-foreground));
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 6rem 1.5rem;
+  }
+
+  .intro {
+    font-size: 1.125rem;
+  }
+}

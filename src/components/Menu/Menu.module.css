@@ -1,0 +1,19 @@
+.nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.navLink {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: hsl(var(--muted-foreground));
+  transition: color 0.2s ease;
+}
+
+.navLink:hover,
+.navLink:focus-visible {
+  color: hsl(var(--foreground));
+}

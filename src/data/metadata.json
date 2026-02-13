@@ -1,0 +1,34 @@
+{
+  "site": {
+    "title": "Procretaire",
+    "description": "Your professional graphic and web services and solutions",
+    "shortDescription": "Procretaire - Professional Branding & Web Services",
+    "author": "Procretaire Team",
+    "domain": "procretaire.com",
+    "url": "https://procretaire.com",
+    "language": "en",
+    "locale": "en_US",
+    "timezone": "UTC"
+  },
+  "seo": {
+    "keywords": ["secretarial", "administrative", "services", "professional"],
+    "ogImage": "/icon0.svg",
+    "ogImageAlt": "Procretaire logo",
+    "twitterHandle": "@procretaire"
+  },
+  "contact": {
+    "email": "hello@procretaire.com",
+    "phone": "+1 (555) 000-0000",
+    "address": "Your Address Here"
+  },
+  "social": {
+    "twitter": "https://twitter.com/procretaire",
+    "linkedin": "https://linkedin.com/company/procretaire",
+    "facebook": "https://facebook.com/procretaire"
+  },
+  "organization": {
+    "name": "Procretaire",
+    "logo": "/icon0.svg",
+    "foundedYear": 2026
+  }
+}
