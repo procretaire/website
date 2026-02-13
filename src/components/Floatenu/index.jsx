@@ -1,14 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import meta from "@/data/metadata.json";
 import styles from "./Floatenu.module.css";
 
-const menuItems = [
-  { label: "Route", href: "#route", icon: "→" },
-  { label: "Bundler", href: "#bundler", icon: "◉" },
-  { label: "Route Info", href: "#route-info", icon: "ℹ" },
-  { label: "Preference", href: "#preference", icon: "⚙" },
-];
+const iconMap = {
+  route: "→",
+  bundler: "◉",
+  info: "ℹ",
+  preference: "⚙",
+};
+
+const menuItems = meta.navigation?.floating ?? [];
 
 export default function Floatenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,7 +34,7 @@ export default function Floatenu() {
             role="menuitem"
             onClick={() => setIsOpen(false)}
           >
-            <span className={styles.icon}>{item.icon}</span>
+            <span className={styles.icon}>{iconMap[item.iconKey] ?? ""}</span>
             <span className={styles.label}>{item.label}</span>
           </a>
         ))}

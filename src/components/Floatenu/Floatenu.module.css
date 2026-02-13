@@ -19,13 +19,13 @@
   border: 1px solid hsl(var(--border));
   background: hsl(var(--card));
   color: hsl(var(--foreground));
-  box-shadow: 0 10px 40px hsl(var(--foreground) / 0.15);
+  box-shadow: var(--shadow-foreground);
   transition: all 0.2s ease;
   cursor: pointer;
 }
 
 .trigger:hover {
-  box-shadow: 0 14px 48px hsl(var(--foreground) / 0.22);
+  box-shadow: var(--shadow-foreground-strong);
   transform: translateY(-2px);
 }
 
@@ -54,7 +54,7 @@
   border: 1px solid hsl(var(--border));
   background: hsl(var(--card));
   padding: 0.5rem;
-  box-shadow: 0 16px 48px hsl(var(--foreground) / 0.15);
+  box-shadow: var(--shadow-foreground);
   opacity: 0;
   transform: translateY(10px) scale(0.95);
   pointer-events: none;
@@ -100,7 +100,7 @@
   letter-spacing: 0.01em;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 661px) {
   .floatenu {
     display: none;
   }

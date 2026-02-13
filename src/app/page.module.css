@@ -78,7 +78,7 @@
 	border: 1px solid hsl(var(--border));
 	background: hsl(var(--card) / 0.8);
 	padding: 1rem;
-	box-shadow: 0 14px 40px hsl(var(--accent) / 0.25);
+	box-shadow: var(--shadow-accent);
 }
 
 .logo {
@@ -112,8 +112,16 @@
 	font-size: 1rem;
 	color: hsl(var(--muted-foreground));
 }
+.tagline {
+		font-family: var(--font-fraunces);
+		color: hsl(var(--muted-foreground));
+		font-size: 1rem;
+	}
 
 @media (min-width: 640px) {
+	.tagline {
+		font-size: 1.65rem;
+	}
 	.hero {
 		padding: 6rem 1.5rem;
 	}

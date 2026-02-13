@@ -1,6 +1,7 @@
 {
   "site": {
     "title": "Procretaire",
+    "tagline": "Design. Develop. Deploy. Deliver.",
     "description": "Your professional graphic and web services and solutions",
     "shortDescription": "Procretaire - Professional Branding & Web Services",
     "author": "Procretaire Team",
@@ -30,5 +31,11 @@
     "name": "Procretaire",
     "logo": "/icon0.svg",
     "foundedYear": 2026
-  }
+  },
+  "navigation": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Services", "href": "#services" },
+    { "label": "Contact", "href": "#contact" }
+  ]
 }

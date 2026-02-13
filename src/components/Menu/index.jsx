@@ -1,11 +1,7 @@
+import meta from "@/data/metadata.json";
 import styles from "./Menu.module.css";
 
-const navItems = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
-];
+const navItems = meta.navigation?.primary ?? [];
 
 export default function Menu() {
   return (

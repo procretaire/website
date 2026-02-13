@@ -20,6 +20,7 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(meta.site.url),
   title: meta.site.title,
   description: meta.site.description,
   authors: [{ name: meta.site.author }],
@@ -53,7 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang={meta.site.language}>
-      <meta name="apple-mobile-web-app-title" content="Procretaire" />
+      <head>
+        <meta name="apple-mobile-web-app-title" content="Procretaire" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${fraunces.variable} antialiased`}
       >

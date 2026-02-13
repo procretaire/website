@@ -55,7 +55,6 @@ export default function DarkmodeToggle() {
 					</svg>
 				</span>
 			</span>
-			<span className={styles.label}>{theme === "dark" ? "Dark" : "Light"}</span>
 		</button>
 	);
 }

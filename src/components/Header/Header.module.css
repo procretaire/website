@@ -35,7 +35,7 @@
 	border: 1px solid hsl(var(--border));
 	background: hsl(var(--card) / 0.85);
 	padding: 0.45rem;
-	box-shadow: 0 12px 30px hsl(var(--accent) / 0.2);
+	box-shadow: var(--shadow-accent);
 }
 
 .logo {

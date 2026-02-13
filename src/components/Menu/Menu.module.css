@@ -1,5 +1,5 @@
 .nav {
-  display: inline-flex;
+  display: none;
   align-items: center;
   gap: 1.25rem;
 }
@@ -16,4 +16,10 @@
 .navLink:hover,
 .navLink:focus-visible {
   color: hsl(var(--foreground));
+}
+
+@media (max-width: 660px) {
+  .nav {
+    display: inline-flex;
+  }
 }
