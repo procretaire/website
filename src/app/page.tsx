@@ -34,8 +34,10 @@ export default function Home() {
           <h1 className={styles.title}>Procretaire</h1>
           <Typewriter items={meta.site.tagline} typingSpeedMin={300} className={styles.tagline} />
           <p className={styles.subtitle}>
-            We are crafting something refined.<br />
-            The full experience lands soon.
+            <Link href="/services" className={styles.link}>
+              We are crafting something refined.<br />
+              The full experience lands soon.
+            </Link>
           </p>
         </div>
       </section>

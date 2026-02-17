@@ -4,7 +4,7 @@ import Floatenu from "@/components/Floatenu";
 import styles from "./page.module.css";
 import AnimatedBackground from "@/components/AnimatedBackground";
 
-export default function AboutPage() {
+export default function About() {
   return (
     <>
     <AnimatedBackground />
